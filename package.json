@@ -1,0 +1,28 @@
+{
+  "name": "todos",
+  "description": "Simple todolist based on vue.js",
+  "version": "1.0.0",
+  "main": "index.html",
+  "homepage": "https://github.com/bili/todos",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bili/todos.git"
+  },
+  "bugs": {
+    "url": "https://github.com/bili/todos/issues"
+  },
+  "license": "MIT",
+  "keywords": [
+    "todo",
+    "list",
+    "vue",
+    "task"
+  ],
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-clean-css": "^3.0.3",
+    "gulp-rename": "^1.2.2",
+    "gulp-uglify": "^2.0.1",
+    "pump": "^1.0.2"
+  }
+}

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Paperscroll</title>
+        <link rel="stylesheet" href="dist/style/index.min.css">
+    </head>
+
+    <body>
+        <aside>
+            <div class="fixed">
+                <ul class="toc"></ul>
+            </div>
+        </aside>
+        <article>
+            <section>
+                <h2>What is PaperScript?</h2>
+                <p> PaperScript is the plain old JavaScript that you are used to, with added support of mathematical operators (<tt>+ - * / %</tt>) for <tt><a href="/reference/point">Point</a></tt> and <tt><a href="/reference/size">Size</a></tt> objects. PaperScript code is automatically executed in its own scope that without polluting with the global scope still has access to all the global browser objects and functions, such as <tt>document</tt> or <tt>window</tt>.  </p>
+                <p> By default, the Paper.js library only exports one object into the global scope: the <b><tt>paper</tt></b> object. It contains all the classes and objects that the library defines. When working with PaperScript, the user does not need to care about this though, because inside PaperScript code, through the use of clever scoping, all of <tt>paper</tt>'s objects and functions seem global.  </p>
+                <p> PaperScript also offers automatic creation of <tt><a href="/reference/project">Project</a></tt>, <tt><a href="/reference/view">View</a></tt> and mouse <tt><a href="/reference/tool">Tool</a></tt> objects, and simplifies the installation of event handlers for these. </p>
+            </section>
+            <section>
+                <h2>TEST jifjsaif</h2>
+                <p> PaperScript code is loaded just like any other JavaScript using the <tt>&lt;script&gt;</tt> tag, except for the type being set to <tt>"text/paperscript"</tt> or <tt>"text/x-paperscript" </tt>. The code can either be an external file (<tt>src="URL"</tt>), or inlined: </p>
+                <p> If we copy the inlined code to a file called <em>js/myScript.js</em> we can rewrite the above example to load the external file instead.  </p>
+                <p> If we copy the inlined code to a file called <em>js/myScript.js</em> we can rewrite the above example to load the external file instead.  </p>
+                <p> If we copy the inlined code to a file called <em>js/myScript.js</em> we can rewrite the above example to load the external file instead.  </p>
+                <p> If we copy the inlined code to a file called <em>js/myScript.js</em> we can rewrite the above example to load the external file instead.  </p>
+                <p> If we copy the inlined code to a file called <em>js/myScript.js</em> we can rewrite the above example to load the external file instead.  </p>
+                <p> These attributes are supported in PaperScript <tt>&lt;script&gt;</tt> tags: </p>
+                <p> <b><tt>src="URL"</tt></b>: The URL to load the PaperScript code from.  </p>
+                <p> <b><tt>canvas="ID"</tt></b>: Links the PaperScript code to the canvas with the given ID and produces a <tt><a href="/reference/project">Project</a></tt> and <tt><a href="/reference/view">View</a></tt> object for it on the fly. For those concerned with validation, <tt>data-paper-canvas="ID"</tt> is supported too.  </p>
+            </section>
+            <section id="script-configuration">
+                <h2>Script Configuration</h2>
+                <p> PaperScript code is loaded just like any other JavaScript using the <tt>&lt;script&gt;</tt> tag, except for the type being set to <tt>"text/paperscript"</tt> or <tt>"text/x-paperscript" </tt>. The code can either be an external file (<tt>src="URL"</tt>), or inlined: </p>
+                <p> If we copy the inlined code to a file called <em>js/myScript.js</em> we can rewrite the above example to load the external file instead.  </p>
+                <p> These attributes are supported in PaperScript <tt>&lt;script&gt;</tt> tags: </p>
+                <p> <b><tt>src="URL"</tt></b>: The URL to load the PaperScript code from.  </p>
+                <p> <b><tt>canvas="ID"</tt></b>: Links the PaperScript code to the canvas with the given ID and produces a <tt><a href="/reference/project">Project</a></tt> and <tt><a href="/reference/view">View</a></tt> object for it on the fly. For those concerned with validation, <tt>data-paper-canvas="ID"</tt> is supported too.  </p>
+                <div class="note">
+                    <h4>Please note:</h4>
+                    <p> When including more than one PaperScript in a page, each script will run in its own scope and will not see the objects and functions declared in the others. For PaperScript to communicate with other PaperScript or JavaScript code, see the tutorial about <a href="/tutorials/getting-started/paperscript-interoperability/">PaperScript Interoperability</a>.  </p>
+                    <div class="text-end"></div>
+                </div>
+            </section>
+            <section id="canvas-configuration" style="height: auto;">
+                <a name="canvas-configuration" title="Canvas Configuration" class="anchor" href="#">
+                    <h2>Canvas Configuration</h2>
+                </a>
+                <p> Paper.js can be configured in a few different ways by adding attributes to the canvas tag: </p>
+                <p> <b><tt>resize="true"</tt></b>: Makes the canvas object as high and wide as the Browser window and resizes it whenever the user resizes the window. When the window is resized, the size of your <tt><a href="/reference/global#view">global.view</a></tt> is also automatically adjusted. If validation is a concern, <tt>data-paper-resize="true"</tt> is supported too.  </p>
+                <p> Your code can respond to any resizing of the window by creating a <tt><a href="/reference/view#onresize">onResize</a></tt> function handler. For example, let's say you create a circle shaped path at the center of the view, and you want it to be centered after resizing: </p>
+                <p> <b><tt>keepalive="true"</tt></b>: To conserve battery power and cpu usage, Paper.js normally stops all animation events when the window is not focused. If you want it to keep playing animations, even if the window is in the background, set <tt>keepalive="true"</tt> in your canvas tag. And again for validation, <tt>data-paper-keepalive="true"</tt> works as well.  </p>
+            </section>
+        </article>
+        <script src="libs/jquery.min.js"></script>
+        <script src="dist/script/paperscroll.min.js"></script>
+    </body>
+
+</html>
