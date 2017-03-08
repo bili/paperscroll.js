@@ -1,22 +1,22 @@
 {
-  "name": "todos",
-  "description": "Simple todolist based on vue.js",
-  "version": "1.0.0",
+  "name": "paperscroll.js",
+  "description": "自动创建导航栏，滚动屏幕，实时定位导航；点击导航或是内容标题也可以滑至对应内容。",
+  "version": "0.0.1",
   "main": "index.html",
-  "homepage": "https://github.com/bili/todos",
+  "homepage": "https://github.com/bili/paperscroll.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/bili/todos.git"
+    "url": "https://github.com/bili/paperscroll.js.git"
   },
   "bugs": {
-    "url": "https://github.com/bili/todos/issues"
+    "url": "https://github.com/bili/paperscroll.js/issues"
   },
   "license": "MIT",
   "keywords": [
-    "todo",
-    "list",
-    "vue",
-    "task"
+      "scroll",
+      "navigator",
+      "nav",
+      "navigation"
   ],
   "devDependencies": {
     "gulp": "^3.9.1",
